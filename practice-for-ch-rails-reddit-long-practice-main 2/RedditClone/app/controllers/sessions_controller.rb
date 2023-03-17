@@ -6,8 +6,7 @@ class SessionsController < ApplicationController
         @user = User.find_by_credentials(incoming_username, incoming_password)
         if @user
             login(@user)
-            redirect_to users_url ###change to subs page 
-
+            redirect_to subs_url ###change to subs page 
         else 
             render :new
         end

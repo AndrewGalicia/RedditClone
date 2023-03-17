@@ -16,6 +16,9 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
     attr_reader :password
 
+    has_many :subs,
+    foreign_key: :mod_id,
+    class_name: :Sub  
     #spire
 
 
